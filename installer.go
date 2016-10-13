@@ -3,8 +3,7 @@ package dbhwin32
 import (
 	"syscall"
 
-	"./wrapper"
-
+	"github.com/dbheise/dbhwin32/wrapper"
 	"github.com/winlabs/gowin32"
 )
 
