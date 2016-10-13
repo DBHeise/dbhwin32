@@ -58,6 +58,7 @@ func MsiEnumClients(componentGUID *uint16, index uint32, buffer *uint16) error {
 }
 
 func MsiEnumPatches(productGUID *uint16, index uint32, buffer *uint16, transformBuffer *uint16, transformBufferSize *uint32) error {
+	//https://msdn.microsoft.com/en-us/library/windows/desktop/aa370099(v=vs.85).aspx
 	r, _, _ := syscall.Syscall6(
 		procMsiEnumPatches.Addr(),
 		5,
