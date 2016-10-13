@@ -15,5 +15,18 @@ go get -v github.com/DBHeise/dbhwin32
 
 ## Sample Code
 ```go
-tbd
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/dbheise/dbhwin32"
+)
+
+func main() {
+	products := dbhwin32.GetInstalledProducts()
+	j, _ := json.Marshal(products)
+	fmt.Printf("%s\n", j)
+}
 ```
